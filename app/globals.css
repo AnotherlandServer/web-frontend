@@ -3,17 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --foreground-rgb: 194, 41, 124;
+  --background-start-rgb: 194, 41, 124;
+  --background-end-rgb: 80, 32, 84;
 }
 
 body {
@@ -24,4 +16,35 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+main {
+  padding-top: 125px !important;
+}
+
+#anotherland-logo {
+  background-image: url('/Anotherland-logo.jpg');
+  background-position: center center;
+  background-size: cover;
+  min-height: 100px;
+}
+
+@media only screen and (min-width: 1024px) {
+  #anotherland-logo {
+    min-height: 200px;
+  }
+
+  main {
+    padding-top: 250px !important;
+  }
+}
+
+@media only screen and (min-width: 3840px) {
+  #anotherland-logo {
+    min-height: 300px;
+  }
+
+  main {
+    padding-top: 370px !important;
+  }
 }
