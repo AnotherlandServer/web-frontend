@@ -19,7 +19,7 @@ import { redirect, useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { changePassword } from '../app/actions';
 
-export default function ({token}:{token: String}) {
+export default function PasswordChange({token}:{token: String}) {
     const [newPassword, setNewPassword] = useState('');
     const [confirmNewPassword, setConfirmNewPassword] = useState('');
     const [error, setError] = useState('');
