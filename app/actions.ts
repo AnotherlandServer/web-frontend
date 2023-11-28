@@ -51,7 +51,7 @@ export async function changePassword(token: String, password: String) {
 
     console.log("Account creation result", result);
 
-    if (result.errors && result.errors.length) {
+    if (result.errors && result.errors.length || !(result.data && result.data.createAccount && result.data.createAccount.id)) {
         throw new Error("Unable to create account!")
     }
 }
