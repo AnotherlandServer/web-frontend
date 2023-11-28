@@ -49,7 +49,9 @@ export async function changePassword(token: String, password: String) {
 
     let result = await account_result.json();
 
-    if (result.errors.length) {
+    console.log("Account creation result", result);
+
+    if (result.errors && result.errors.length) {
         throw new Error("Unable to create account!")
     }
 }
