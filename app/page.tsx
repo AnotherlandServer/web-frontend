@@ -117,6 +117,7 @@ export default async function Home({searchParams}: {searchParams: {code: string|
       <p className='p-5 text-sm font-medium text-[#FAD02E]'>Success! You can close this tab now.</p>
     );
   } else {
-    redirect(`https://discord.com/oauth2/authorize?response_type=code&client_id=1178435541423894598&scope=identify&redirect_uri=http%3A%2F%2Flocalhost:3000&prompt=consent`);
+    let redirect_url = encodeURIComponent(process.env.REDIRECT_URL);
+    redirect(`https://discord.com/oauth2/authorize?response_type=code&client_id=${process.env.DISCORD_CLIENT_ID}&scope=identify&redirect_uri=${redirect_url}&prompt=consent`);
   }
 }
