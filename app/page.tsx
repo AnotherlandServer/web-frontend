@@ -42,10 +42,6 @@ declare var process : {
 }
 
 export default async function Home({searchParams}: {searchParams: {code: string|undefined, token: string|undefined, success: boolean|undefined}}) {
-  if (!searchParams.code && !searchParams.token) {
-      
-  }
-
   if (searchParams.code) {
     console.log(searchParams.code);
 
